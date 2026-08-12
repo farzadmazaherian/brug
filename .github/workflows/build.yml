@@ -21,18 +21,10 @@ jobs:
         uses: dtolnay/rust-toolchain@stable
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
-      - name: Build Tauri App
-        uses: tauri-apps/tauri-action@v0
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tagName: v__VERSION__
-          releaseName: 'Brug v__VERSION__'
-          releaseBody: 'See the assets to download Brug'
-          releaseDraft: true
-          prerelease: false
+      - name: Build App
+        run: npm run tauri build
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
