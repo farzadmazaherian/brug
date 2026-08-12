@@ -1,0 +1,57 @@
+{
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build",
+    "devPath": "http://localhost:1420",
+    "distDir": "../dist",
+    "withGlobalTauri": false
+  },
+  "package": {
+    "productName": "Brug",
+    "version": "1.0.0"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": false,
+      "shell": { "open": true }
+    },
+    "bundle": {
+      "active": true,
+      "targets": ["msi", "nsis"],
+      "identifier": "com.brug.taalapp",
+      "icon": [
+        "icons/32x32.png",
+        "icons/128x128.png",
+        "icons/128x128@2x.png",
+        "icons/icon.icns",
+        "icons/icon.ico"
+      ],
+      "resources": [],
+      "externalBin": [],
+      "copyright": "",
+      "category": "Education",
+      "shortDescription": "آموزش موقعیت‌محور هلندی و انگلیسی",
+      "longDescription": "برنامهٔ آموزش زبان هلندی و انگلیسی برای فارسی‌زبانان، با درس‌های موقعیتی، مکالمهٔ زنده و تکرار فاصله‌دار.",
+      "windows": {
+        "certificateThumbprint": null,
+        "digestAlgorithm": "sha256",
+        "timestampUrl": ""
+      }
+    },
+    "security": {
+      "csp": null
+    },
+    "updater": { "active": false },
+    "windows": [
+      {
+        "title": "Brug — پل زبان",
+        "width": 1000,
+        "height": 720,
+        "minWidth": 380,
+        "minHeight": 560,
+        "resizable": true,
+        "fullscreen": false
+      }
+    ]
+  }
+}
